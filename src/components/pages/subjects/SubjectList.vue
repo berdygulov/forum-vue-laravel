@@ -19,6 +19,7 @@ export default {
         .get(url)
         .then((res) => {
           this.subjects = res.data.subjects
+          // console.log(res.data.subjects[0].chapter.name)
         })
         .catch((err) => {
           console.log(err)
@@ -72,8 +73,11 @@ export default {
           class="flex flex-col gap-y-4 px-7 py-5 bg-indigo-50 rounded-md justify-between transition-all duration-300 hover:shadow-md"
         >
           <div class="">
-            <p class="font-bold leading-6 text-gray-900">{{ subject.title }}</p>
-            <p class="mt-1 text-sm leading-5 text-gray-500">{{ subject.description }}</p>
+            <span class="leading-6 text-white bg-gray-400 px-1 py-1 rounded inline-flex text-xs">
+              {{ subject?.chapter.name }}
+            </span>
+            <p class="font-bold leading-6 text-gray-900 mt-4">{{ subject.title }}</p>
+            <p class="text-sm leading-5 text-gray-500 mt-1">{{ subject.description }}</p>
           </div>
           <div class="flex gap-2">
             <router-link
