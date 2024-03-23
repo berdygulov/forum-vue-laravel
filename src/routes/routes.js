@@ -41,7 +41,7 @@ const routes = [
     component: CreateChapter
   },
   {
-    path: '/chapters/edit/:chapterId/',
+    path: '/chapters/:chapterId/edit/',
     name: 'chaptersEdit',
     component: EditChapter
   },
@@ -55,7 +55,7 @@ const routes = [
     component: SubjectList
   },
   {
-    path: '/subjects/edit/:subjectId/',
+    path: '/subjects/:subjectId/edit/',
     name: 'subjectsEdit',
     component: EditSubject
   },

@@ -9,4 +9,3 @@ export const getSingleSubject = async (subjectId) => {
       console.log(err)
     })
 }
-
